@@ -10,11 +10,12 @@ export interface DataProps{
   gender: string;
   objective: string;
   level: string;
+  frequency: string;
 }
 
 class CreateNutritionController{
   async handle(request: FastifyRequest, reply: FastifyReply){
-    const { name, weight, height, age, gender, objective, level } = request.body as DataProps;
+    const { name, weight, height, age, gender, objective, level,frequency, } = request.body as DataProps;
 
     const createNutrition = new CreateNutritionService();
 
@@ -26,6 +27,7 @@ class CreateNutritionController{
       objective,
       gender,
       level,
+      frequency,
     });
 
     reply.send(nutrition);

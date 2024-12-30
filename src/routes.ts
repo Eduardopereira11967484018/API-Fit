@@ -15,6 +15,7 @@ import {
         altura: 1.8,
         peso: 74,
         objetivo: "Hipertrofia",
+        frequency: "5",
         refeicoes: [
           {
             horario: "08:00",
